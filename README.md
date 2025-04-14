@@ -1,6 +1,6 @@
 # Diabetes Prediction Web App
 
-This is a full-stack machine learning web application that predicts whether a person is diabetic or not based on medical input parameters. The app uses a trained machine learning model (Logistic Regression or other algorithms) integrated via a FastAPI backend and served through a React frontend.
+This is a full-stack machine learning web application that predicts whether a person is diabetic or not based on medical input parameters. The app uses a trained machine learning model (Logistic Regression) integrated via a FastAPI backend and served through a React frontend.
 
 ## Features
 
@@ -27,7 +27,7 @@ This is a full-stack machine learning web application that predicts whether a pe
 - Pickle (model serialization)
 
 ### ML Model
-- Logistic Regression / Random Forest / ANN
+- Logistic Regression
 - Trained on the Pima Indians Diabetes Dataset
 - Feature scaling + preprocessing included
 
@@ -45,16 +45,16 @@ This is a full-stack machine learning web application that predicts whether a pe
 ## Installation & Usage
 
 ### 1. Clone the repository
-bash
-git clone https://github.com/GauravOP-03/Diabetes-Prediction.git
-cd Diabetes-Prediction
+- bash
+- git clone https://github.com/GauravOP-03/Diabetes-Prediction.git
+- cd Diabetes-Prediction
 
 ### 2. Backend Setup
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload or python ./main.py
+- cd backend
+- pip install -r requirements.txt
+- uvicorn main:app --reload or python ./main.py
 
 ### 3. Frontend Setup
-cd frontend
-npm install
-npm start
+- cd frontend
+- npm install
+- npm start
