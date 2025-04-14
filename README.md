@@ -28,7 +28,7 @@ This is a full-stack machine learning web application that predicts whether a pe
 
 ### ML Model
 - Logistic Regression
-- Trained on the Pima Indians Diabetes Dataset
+- Trained on the [Pima Indians Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
 - Feature scaling + preprocessing included
 
 ---
