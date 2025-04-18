@@ -3,6 +3,7 @@ import dataSchema from './Schema'
 import { Input } from './components/ui/input'
 import { Label } from "@/components/ui/label";
 import axios from 'axios';
+import backendURL from './config';
 function App() {
   const [data, setData] = useState({
     pregnancies: "",
@@ -46,12 +47,12 @@ function App() {
       setLoading(true);
       dataSchema.parse(parsedData); // validate first
 
-      const res = await axios.post("http://localhost:8000/predict", parsedData); // await this!
+      const res = await axios.post(`${backendURL}/predict`, parsedData); // await this!
       // console.log(res.data);
       setPrediction(res.data.prediction);
       setError(null);
     } catch (err: any) {
-      console.log(err);
+      // console.log(err);
 
       if (err.errors && err.errors[0] && err.errors[0].message) {
         setError(err.errors[0].message);
