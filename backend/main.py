@@ -43,7 +43,7 @@ def predict(input: data):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
 
-@app.get("/loaderio-265032ab3f93fdbf713e28a971534d58", response_class=PlainTextResponse)
+@app.get("/loaderio-265032ab3f93fdbf713e28a971534d58")
 async def verify_loaderio():
     return "loaderio-265032ab3f93fdbf713e28a971534d58"
 
