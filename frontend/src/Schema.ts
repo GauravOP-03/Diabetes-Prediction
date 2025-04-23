@@ -27,7 +27,7 @@ const dataSchema = z.object({
 
   diabetes_pedigree_function: z
     .number()
-    .gte(0.078, { message: "DPF must be at least 0.078" })
+    .gte(0.05, { message: "DPF must be at least 0.078" })
     .lte(2.42, { message: "DPF must be 2.42 or less" }),
 
   age: z

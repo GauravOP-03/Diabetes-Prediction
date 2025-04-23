@@ -15,7 +15,7 @@ class data(BaseModel):
     skin_thickness: confloat(ge=0, le=99)
     insulin: confloat(ge=15, le=300)
     bmi: confloat(ge=10, le=67)
-    diabetes_pedigree_function: confloat(ge=0.078, le=2.42)
+    diabetes_pedigree_function: confloat(ge=0.05, le=2.42)
     age: conint(ge=1, le=100)
 
 app = FastAPI()
@@ -42,6 +42,10 @@ def predict(input: data):
         return {"prediction": int(pred)} 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
+
+@app.get("/loaderio-265032ab3f93fdbf713e28a971534d58", response_class=PlainTextResponse)
+async def verify_loaderio():
+    return "loaderio-265032ab3f93fdbf713e28a971534d58"
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

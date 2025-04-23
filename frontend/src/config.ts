@@ -1,2 +1,2 @@
-const backendURL = "https://diabetes-prediction-mmdy.onrender.com";
+const backendURL = "http://localhost:8000";
 export default backendURL;
